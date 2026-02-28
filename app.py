@@ -1,3 +1,10 @@
+import zipfile
+import os
+
+# Авто-распаковка архива
+if not os.path.exists('dataset'):
+    with zipfile.ZipFile('dataset.zip', 'r') as zip_ref:
+        zip_ref.extractall('.')
 import streamlit as st
 import os
 import cv2
